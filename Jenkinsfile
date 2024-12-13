@@ -14,13 +14,20 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                bat 'npm install'
+                sh 'npm install'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                bat 'npm test'
+                sh 'npm test'
+            }
+        }
+
+        stage('Run Integration Tests') {
+            steps {
+                echo 'Running integration tests...'
+                sh 'npm run integration-test'
             }
         }
 
@@ -31,20 +38,43 @@ pipeline {
             }
         }
 
-        stage('Deploy') {
+        stage('Deploy to Staging') {
             steps {
-                echo 'Deploying the application...'
-                // Tambahkan perintah deploy jika diperlukan
+                echo 'Deploying to the staging server...'
+                bat 'npm run deploy-staging'
             }
         }
     }
 
     post {
         success {
-            echo 'Pipeline finished successfully!'
+            emailext subject: 'Build Succeeded', 
+                     body: 'The build succeeded!',
+                     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }
         failure {
-            echo 'Pipeline failed!'
+            emailext subject: 'Build Failed', 
+                     body: 'The build failed.',
+                     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+        }
+    }
+
+    // Mendukung branching
+    environment {
+        BRANCH_NAME = env.GIT_BRANCH
+    }
+
+    stages {
+        stage('Branch Specific Tests') {
+            when {
+                expression {
+                    return env.BRANCH_NAME == 'develop'
+                }
+            }
+            steps {
+                echo 'Running additional tests for develop branch...'
+                bat 'npm run develop-tests'
+            }
         }
     }
 }
