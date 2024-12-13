@@ -1,4 +1,4 @@
-## Decision coverage and Multiple coverage
+## Decision coveraeg and Multiple coverage
 
 ## Konsep
 
@@ -6,11 +6,11 @@ Decision coverage adalah teknik pengujian yang digunakan untuk memastikan setiap
 
 Multi-Decision coverage adalah pengembangan dari decision testing yang melibatkan lebih dari satu keputusan dalam satu skenario. Fokusnya adalah memastikan kombinasi berbagai keputusan telah diuji secara menyeluruh. Hal ini penting dalam sistem yang memiliki banyak kondisi yang saling tergantung. Tujuanya untuk memastikan semua kemungkinan kombinasi hasil dari kondisi dalam keputusan diuji. Multiple covergae memberikan cakupan yang sangat komphrensif dn juga dapat mengidentifikasi kesalahan logika yang berjalan secara kompleks.
 
-## Gambar Ilustrasi
+### Gambar Ilustrasi
 
 ![image.png](images/ilustrasi.jpeg)
 
-## Penjelasan
+### Penjelasan
 
 decision Point 1 (Username Valid)
 
@@ -47,20 +47,17 @@ Login Sukses
 Password Salah
 Username Tidak Valid
 
-## Langkah-Langkah Pengujian
-
+##Langkah-Langkah Pengujian
 Langkah 1: Pengujian Validasi Username
 Masukkan username valid:
 Pastikan sistem menganggap username benar.
 Masukkan username tidak valid:
 Pastikan sistem memberikan respons yang benar (contoh: pesan error "Username Tidak Valid").
-
 Langkah 2: Pengujian Validasi Password
 Masukkan password valid:
 Pastikan sistem menganggap password benar.
 Masukkan password tidak valid:
 Pastikan sistem memberikan respons yang sesuai (contoh: pesan error "Password Salah").
-
 Langkah 3: Kombinasi Pengujian (Multi-Decision Path)
 Lakukan pengujian terhadap semua kemungkinan kombinasi dari username dan password:
 
@@ -72,7 +69,6 @@ Username tidak valid + Password valid:
 Hasil: Username Tidak Valid.
 Username tidak valid + Password tidak valid:
 Hasil: Username Tidak Valid.
-
 Langkah 4: Verifikasi Outcome
 Untuk setiap kombinasi di langkah 3, pastikan sistem memberikan hasil sesuai dengan logika berikut:
 
@@ -107,11 +103,12 @@ Hasil: Semua cabang logis diuji (True dan False).
 
 # multiple decision coverage
 
-def akses_layanan(usia, anggota):
-if usia >= 18 and anggota == True:
-return "Akses diberikan"
-else:
-return "Akses ditolak"
+```python
+    def akses_layanan(usia, anggota):
+            if usia >= 18 and anggota == True:
+                return "Akses diberikan"
+            else:
+                return "Akses ditolak"
 
 ## Penjelasan :
 
@@ -155,12 +152,11 @@ Multiple Decision Coverage memberikan cakupan yang lebih lengkap, memastikan sem
 Pemilihan metode bergantung pada kebutuhan pengujian dan kompleksitas sistem.
 
 # Contoh penggunaan
-
 def akses_layanan(usia, anggota):
-if usia >= 18 and anggota:
-return "Akses diberikan"
-else:
-return "Akses ditolak"
+    if usia >= 18 and anggota:
+        return "Akses diberikan"
+    else:
+        return "Akses ditolak"
 
 # Decision coverage
 
@@ -182,10 +178,10 @@ Semua keputusan (True dan False) untuk masing-masing kondisi diuji setidaknya se
 # Multiple decision coverage
 
 def akses_layanan(usia, anggota):
-if usia >= 18 and anggota:
-return "Akses diberikan"
-else:
-return "Akses ditolak"
+    if usia >= 18 and anggota:
+        return "Akses diberikan"
+    else:
+        return "Akses ditolak"
 Pada Multiple Decision Coverage, kita menguji semua kombinasi kondisi yang ada. Karena ada dua kondisi (usia dan status anggota), kita memiliki 4 kombinasi kemungkinan:
 
 usia >= 18 True, anggota True
@@ -219,6 +215,8 @@ Ayyub abdurahman 2200016092 (konsep)[https://github.com/AyyubAbdurrahman]
 M.rizkiansyah 22000016008
 Adam zalfa
 [Tulis daftar kontributor (anggota kelompok) beserta link github]
+
+```
 
 ```
 
