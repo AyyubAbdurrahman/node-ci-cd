@@ -164,7 +164,7 @@ Pemilihan metode bergantung pada kebutuhan pengujian dan kompleksitas sistem.
                 return "Akses diberikan"
             else:
                 return "Akses ditolak"
-```
+
 
 # Decision coverage
 
@@ -179,6 +179,8 @@ Hasil: "Akses ditolak"
 Cabang yang diuji:
 usia >= 18 adalah False
 anggota adalah False
+
+```
 
 Cakupan:
 Semua keputusan (True dan False) untuk masing-masing kondisi diuji setidaknya sekali
