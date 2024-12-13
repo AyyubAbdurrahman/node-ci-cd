@@ -14,25 +14,27 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh '"C:\\Program Files\\Git\\bin\\bash.exe" -c "npm install"'
+                bat 'npm install'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                sh '"C:\\Program Files\\Git\\bin\\bash.exe" -c "npm test"'
+                bat 'npm test'
             }
         }
 
         stage('Build') {
             steps {
                 echo 'Building the application...'
+                // Tambahkan perintah build jika diperlukan
             }
         }
 
         stage('Deploy') {
             steps {
                 echo 'Deploying the application...'
+                // Tambahkan perintah deploy jika diperlukan
             }
         }
     }
