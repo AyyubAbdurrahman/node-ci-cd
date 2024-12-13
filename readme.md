@@ -1,4 +1,4 @@
-## Decision coveraeg and Multiple coverage
+# Decision coverage and Multiple coverage 🎉
 
 ## Konsep
 
