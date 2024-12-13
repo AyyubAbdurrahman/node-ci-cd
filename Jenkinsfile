@@ -41,7 +41,18 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 echo 'Deploying to the staging server...'
-                bat 'npm run deploy-staging'
+                powershell 'npm run deploy-staging'
+            }
+        }
+
+        // Mendukung branching
+        stage('Branch Specific Tests') {
+            when {
+                branch 'develop'
+            }
+            steps {
+                echo 'Running additional tests for develop branch...'
+                powershell 'npm run develop-tests'
             }
         }
     }
@@ -56,25 +67,6 @@ pipeline {
             emailext subject: 'Build Failed', 
                      body: 'The build failed.',
                      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
-        }
-    }
-
-    // Mendukung branching
-    environment {
-        BRANCH_NAME = env.GIT_BRANCH
-    }
-
-    stages {
-        stage('Branch Specific Tests') {
-            when {
-                expression {
-                    return env.BRANCH_NAME == 'develop'
-                }
-            }
-            steps {
-                echo 'Running additional tests for develop branch...'
-                bat 'npm run develop-tests'
-            }
         }
     }
 }
