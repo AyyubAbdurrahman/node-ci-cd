@@ -79,6 +79,7 @@ Jika salah satu atau kedua kondisi salah, sistem memberikan respons error yang t
 
 # Decision Coverage
 
+```python
 def akses_layanan(usia, anggota):
 if usia >= 18 and anggota == True:
 return "Akses diberikan"
@@ -100,6 +101,7 @@ Test Case 2: usia = 16, anggota = False
 Hasil: "Akses ditolak" (Cabang False dari kedua kondisi).
 
 Hasil: Semua cabang logis diuji (True dan False).
+```
 
 # multiple decision coverage
 
@@ -109,7 +111,7 @@ Hasil: Semua cabang logis diuji (True dan False).
                 return "Akses diberikan"
             else:
                 return "Akses ditolak"
-```
+
 
 ## Penjelasan :
 
@@ -138,6 +140,7 @@ Test Case 4: usia = 16, anggota = False
 Kombinasi: (False, False). Hasil: "Akses ditolak".
 
 Hasil: Semua kombinasi kondisi diuji.
+```
 
 # Perbedaan :
 
@@ -154,11 +157,13 @@ Pemilihan metode bergantung pada kebutuhan pengujian dan kompleksitas sistem.
 
 # Contoh penggunaan
 
-def akses_layanan(usia, anggota):
-if usia >= 18 and anggota:
-return "Akses diberikan"
-else:
-return "Akses ditolak"
+```python
+    def akses_layanan(usia, anggota):
+            if usia >= 18 and anggota == True:
+                return "Akses diberikan"
+            else:
+                return "Akses ditolak"
+```
 
 # Decision coverage
 
@@ -179,11 +184,14 @@ Semua keputusan (True dan False) untuk masing-masing kondisi diuji setidaknya se
 
 # Multiple decision coverage
 
-def akses_layanan(usia, anggota):
-if usia >= 18 and anggota:
-return "Akses diberikan"
-else:
-return "Akses ditolak"
+```python
+    def akses_layanan(usia, anggota):
+            if usia >= 18 and anggota == True:
+                return "Akses diberikan"
+            else:
+                return "Akses ditolak"
+```
+
 Pada Multiple Decision Coverage, kita menguji semua kombinasi kondisi yang ada. Karena ada dua kondisi (usia dan status anggota), kita memiliki 4 kombinasi kemungkinan:
 
 usia >= 18 True, anggota True
