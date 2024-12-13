@@ -1,16 +1,16 @@
-# Decision coverage and Multiple coverage 🎉
+# Decision coverage and Multiple coverage 🐍
 
-## Konsep
+1. ## Konsep :
 
 Decision coverage adalah teknik pengujian yang digunakan untuk memastikan setiap jalur logis dalam kode program telah diuji setidaknya sekali. Fokusnya adalah pada titik keputusan dalam kode, seperti pernyataan if, switch, atau loop bersyarat. Tujuanya untuk memastikan semua cabang logika berjalan dan teruji. teknik penjian ini sangat cocok digunakan untuk pengujian dengan tingkat kopleksitas rendah ataupun sedang
 
 Multi-Decision coverage adalah pengembangan dari decision testing yang melibatkan lebih dari satu keputusan dalam satu skenario. Fokusnya adalah memastikan kombinasi berbagai keputusan telah diuji secara menyeluruh. Hal ini penting dalam sistem yang memiliki banyak kondisi yang saling tergantung. Tujuanya untuk memastikan semua kemungkinan kombinasi hasil dari kondisi dalam keputusan diuji. Multiple covergae memberikan cakupan yang sangat komphrensif dn juga dapat mengidentifikasi kesalahan logika yang berjalan secara kompleks.
 
-### Gambar Ilustrasi
+2. ## Gambar Ilustrasi :
 
 ![image.png](images/ilustrasi.jpeg)
 
-### Penjelasan
+### Penjelasan :
 
 decision Point 1 (Username Valid)
 
@@ -31,13 +31,13 @@ Login Sukses (Username dan Password valid)
 Password Salah (Username valid tetapi password salah)
 Username Tidak Valid (Username tidak ditemukan di database)
 
-## Langkah-langkah Pengujian
+3. ## Langkah-langkah Pengujian :
 
 berdasarkan gambar berikut penjelasanya
 
 Berikut adalah langkah-langkah pengujian berdasarkan alur flowchart pada gambar:
 
-## Pemahaman Komponen Flowchart
+## Pemahaman Komponen Flowchart :
 
 Decision Point 1 (Username Valid): Memeriksa apakah username yang dimasukkan valid atau tidak.
 Decision Point 2 (Password Valid): Memeriksa apakah password yang dimasukkan valid atau tidak.
@@ -75,9 +75,9 @@ Untuk setiap kombinasi di langkah 3, pastikan sistem memberikan hasil sesuai den
 Jika kedua kondisi benar, hasilnya adalah "Login Sukses".
 Jika salah satu atau kedua kondisi salah, sistem memberikan respons error yang tepat.
 
-## Contoh Kasus
+4. ## Contoh Kasus :
 
-# Decision Coverage
+### Decision Coverage
 
 ```python
 def akses_layanan(usia, anggota):
@@ -143,20 +143,20 @@ Kombinasi: (False, False). Hasil: "Akses ditolak".
 Hasil: Semua kombinasi kondisi diuji.
 ```
 
-# Perbedaan :
+## Perbedaan :
 
 | **Aspek**            | **Decision Coverage**                                       | **Multiple Decision Coverage**                  |
 | -------------------- | ----------------------------------------------------------- | ----------------------------------------------- |
 | **Jumlah Kombinasi** | Minimal, True/False untuk setiap kondisi secara individual. | Semua kombinasi True/False untuk semua kondisi. |
 | **Tingkat Uji**      | Cukup memastikan setiap cabang diuji.                       | Lebih mendalam, mencakup kombinasi logika.      |
 
-# Kesimpulan :
+## Kesimpulan :
 
 Decision Coverage memberikan cakupan dasar dengan fokus pada hasil individual setiap kondisi.
 Multiple Decision Coverage memberikan cakupan yang lebih lengkap, memastikan semua kombinasi logika diuji untuk mengurangi risiko bug pada situasi kompleks.
 Pemilihan metode bergantung pada kebutuhan pengujian dan kompleksitas sistem.
 
-# Contoh penggunaan
+5. ## Contoh penggunaan
 
 ```python
     def akses_layanan(usia, anggota):
@@ -185,7 +185,7 @@ anggota adalah False
 Cakupan:
 Semua keputusan (True dan False) untuk masing-masing kondisi diuji setidaknya sekali
 
-# Multiple decision coverage
+## Multiple decision coverage
 
 ```python
     def akses_layanan(usia, anggota):
