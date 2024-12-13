@@ -101,6 +101,7 @@ Test Case 2: usia = 16, anggota = False
 Hasil: "Akses ditolak" (Cabang False dari kedua kondisi).
 
 Hasil: Semua cabang logis diuji (True dan False).
+
 ```
 
 # multiple decision coverage
