@@ -109,9 +109,7 @@ Hasil: Semua cabang logis diuji (True dan False).
                 return "Akses diberikan"
             else:
                 return "Akses ditolak"
-
-...
-
+```
 
 ## Penjelasan :
 
@@ -155,11 +153,12 @@ Multiple Decision Coverage memberikan cakupan yang lebih lengkap, memastikan sem
 Pemilihan metode bergantung pada kebutuhan pengujian dan kompleksitas sistem.
 
 # Contoh penggunaan
+
 def akses_layanan(usia, anggota):
-    if usia >= 18 and anggota:
-        return "Akses diberikan"
-    else:
-        return "Akses ditolak"
+if usia >= 18 and anggota:
+return "Akses diberikan"
+else:
+return "Akses ditolak"
 
 # Decision coverage
 
@@ -181,10 +180,10 @@ Semua keputusan (True dan False) untuk masing-masing kondisi diuji setidaknya se
 # Multiple decision coverage
 
 def akses_layanan(usia, anggota):
-    if usia >= 18 and anggota:
-        return "Akses diberikan"
-    else:
-        return "Akses ditolak"
+if usia >= 18 and anggota:
+return "Akses diberikan"
+else:
+return "Akses ditolak"
 Pada Multiple Decision Coverage, kita menguji semua kombinasi kondisi yang ada. Karena ada dua kondisi (usia dan status anggota), kita memiliki 4 kombinasi kemungkinan:
 
 usia >= 18 True, anggota True
@@ -218,6 +217,8 @@ Ayyub abdurahman 2200016092 (konsep)[https://github.com/AyyubAbdurrahman]
 M.rizkiansyah 22000016008
 Adam zalfa
 [Tulis daftar kontributor (anggota kelompok) beserta link github]
+
+```
 
 ```
 
