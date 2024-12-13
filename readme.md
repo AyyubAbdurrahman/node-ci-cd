@@ -1,4 +1,4 @@
-## Decision coveraeg and Multiple coverage
+## Decision coverage and Multiple coverage
 
 ## Konsep
 
@@ -47,7 +47,8 @@ Login Sukses
 Password Salah
 Username Tidak Valid
 
-##Langkah-Langkah Pengujian
+## Langkah-Langkah Pengujian
+
 Langkah 1: Pengujian Validasi Username
 Masukkan username valid:
 Pastikan sistem menganggap username benar.
