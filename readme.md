@@ -6,11 +6,11 @@ Decision coverage adalah teknik pengujian yang digunakan untuk memastikan setiap
 
 Multi-Decision coverage adalah pengembangan dari decision testing yang melibatkan lebih dari satu keputusan dalam satu skenario. Fokusnya adalah memastikan kombinasi berbagai keputusan telah diuji secara menyeluruh. Hal ini penting dalam sistem yang memiliki banyak kondisi yang saling tergantung. Tujuanya untuk memastikan semua kemungkinan kombinasi hasil dari kondisi dalam keputusan diuji. Multiple covergae memberikan cakupan yang sangat komphrensif dn juga dapat mengidentifikasi kesalahan logika yang berjalan secara kompleks.
 
-### Gambar Ilustrasi
+## Gambar Ilustrasi
 
 ![image.png](images/ilustrasi.jpeg)
 
-### Penjelasan
+## Penjelasan
 
 decision Point 1 (Username Valid)
 
@@ -53,11 +53,13 @@ Masukkan username valid:
 Pastikan sistem menganggap username benar.
 Masukkan username tidak valid:
 Pastikan sistem memberikan respons yang benar (contoh: pesan error "Username Tidak Valid").
+
 Langkah 2: Pengujian Validasi Password
 Masukkan password valid:
 Pastikan sistem menganggap password benar.
 Masukkan password tidak valid:
 Pastikan sistem memberikan respons yang sesuai (contoh: pesan error "Password Salah").
+
 Langkah 3: Kombinasi Pengujian (Multi-Decision Path)
 Lakukan pengujian terhadap semua kemungkinan kombinasi dari username dan password:
 
@@ -69,6 +71,7 @@ Username tidak valid + Password valid:
 Hasil: Username Tidak Valid.
 Username tidak valid + Password tidak valid:
 Hasil: Username Tidak Valid.
+
 Langkah 4: Verifikasi Outcome
 Untuk setiap kombinasi di langkah 3, pastikan sistem memberikan hasil sesuai dengan logika berikut:
 
