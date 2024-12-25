@@ -41,11 +41,10 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 echo 'Deploying to the staging server...'
-                
+                // Tambahkan perintah deploy jika diperlukan
             }
         }
 
-        // Mendukung branching
         stage('Branch Specific Tests') {
             when {
                 branch 'develop'
