@@ -1,14 +1,16 @@
 {
   "name": "ci-cd",
   "version": "1.0.0",
+  "description": "A CI/CD example project",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "integration-test": "jest --config jest.integration.config.js",
+    "start": "node index.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "Ayyub Abdurrahman",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "jest": "^29.7.0"
   },
