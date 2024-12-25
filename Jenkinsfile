@@ -14,20 +14,20 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run Unit Tests') {
             steps {
-                sh 'npm test'
+                bat 'npm test'
             }
         }
 
         stage('Run Integration Tests') {
             steps {
                 echo 'Running integration tests...'
-                sh 'npm run integration-test'
+                bat 'npm run integration-test'
             }
         }
 
@@ -41,7 +41,7 @@ pipeline {
         stage('Deploy to Staging') {
             steps {
                 echo 'Deploying to the staging server...'
-                powershell 'npm run deploy-staging'
+                
             }
         }
 
