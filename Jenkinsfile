@@ -58,18 +58,14 @@ pipeline {
 
     post {
         success {
-            emailext(
-                subject: 'Build Succeeded', 
-                body: 'The build succeeded!',
-                to: 'gamingayyub3@gmail.com'  
-            )
+            emailext subject: 'Build Succeeded', 
+                     body: 'The build succeeded!',
+                     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }
         failure {
-            emailext(
-                subject: 'Build Failed', 
-                body: 'The build failed.',
-                to: 'gamingayyub3@gmail.com'  
-            )
+            emailext subject: 'Build Failed', 
+                     body: 'The build failed.',
+                     recipientProviders: [[$class: 'DevelopersRecipientProvider']]
         }
     }
 }
