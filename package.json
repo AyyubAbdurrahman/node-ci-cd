@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
-    "integration-test": "jest --testPathPattern=integration",
+    "integration-test": "jest --app.test.js",
     "start": "node index.js"
   },
   "keywords": [],
